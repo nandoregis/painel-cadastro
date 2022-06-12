@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+html, body {
+    min-height: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.message {
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 250px);
+    transition: all ease 0.5s;
+}
+
+.message-success {background-color: rgb(89, 158, 89);}
+.message-error {background-color: rgb(206, 95, 95);}
+
+/* Estilo da pagina */
+
+.login-body {
+    background-color: rgb(216, 216, 216);
+}
+
+section.box-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.login {
+    width: 45%;
+    padding: 60px 30px;
+    background-color: rgb(241, 241, 241);
+}
+.login h2 {
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.login input[type=text], .login input[type=password] {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.login input[type=submit] {
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: rgb(221, 152, 23);
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login input[type=submit]:hover {
+    background-color: rgb(199, 140, 32);
+}
+.login input:focus {
+    outline: none;
+}
+
+/*  estilo admin    */
+header {
+    background-color: rgb(61, 61, 61);
+}
+header > .container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header h2 {
+    color: rgb(226, 226, 226);
+    cursor: pointer;
+}
+nav.header--menu ul {list-style: none;}
+nav.header--menu li {
+    display: inline-block;
+    margin-left: 15px;
+}
+nav.header--menu a {
+    text-decoration: none;
+    color: rgb(226, 226, 226);
+}
+header h2:hover, 
+nav.header--menu a:hover {
+    color: white;
+}
+
+.box-menu-lateral {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    min-width: 250px;
+    background-color: rgb(71, 71, 71);
+    transition: all ease 0.5s;
+}
+/* evento menu lateral*/
+.menu-hide{left: -250px;}
+
+.lateral--header h2 {
+    color: rgb(226, 226, 226);
+    text-align: center;
+    font-size: 22px;
+    padding: 15px;
+}
+.lateral--menu ul {list-style: none;}
+.lateral--menu li {
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+.lateral--menu li:hover {background-color: rgb(92, 92, 233);}
+.nav-active {background-color: rgb(92, 92, 233);}
+
+.lateral--menu a{
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(226, 226, 226);
+}
+
+/* --- estilo main ---*/
+
+section.main {
+    margin-left: 250px;
+    padding: 10px;
+    max-height: calc(100vh - 50px);
+    overflow-x: auto;
+    transition: all ease 0.5s;
+}
+
+.event-w100 {
+    margin-left: 0 !important;
+    width: 100%;
+}
+
+.main--content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.w100 {width: 100%;}
+.w49 {width: 49%;}
+.w50 {width: 50%;}
+.mrg-left-1 {margin-left: 1%;}
+.mrg-right-1 {margin-right: 1%;}
+
+.content {
+    margin-bottom: 1%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(236, 236, 236);
+}
+
+.tabela {
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.tabela ul {
+    list-style: none;
+}
+.tabela li {
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(219, 219, 219);
+}
+.el-input {margin-bottom: 10px;}
+.el-input  input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.el-input label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.register--box input[type=submit] {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgb(240, 240, 240);
+    background-color: rgb(41, 131, 86);
+    transition: all ease 0.5s;
+}
+.register--box input[type=submit]:hover {
+    cursor: pointer;
+    background-color: rgb(44, 156, 100);
+}
+.btn-tela:nth-of-type(1) {margin-right: 10px;}
+.btn-tela {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: rgb(241, 241, 241);
+    border-radius: 5px;
+}
+.btn-orange {background-color: rgb(184, 120, 1);}
+.btn-red {background-color: rgb(192, 63, 63);}
+.btn-green {background-color: rgb(91, 148, 91);}
+
+/*  MEDIA SCREEN */
+
+@media screen and (max-width: 768px)  {
+    .w50, .w49 {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .login {
+        width: 80%;
+    }
+}
